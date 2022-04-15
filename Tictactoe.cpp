@@ -1,37 +1,37 @@
 #include<iostream>
 using namespace std;
-
 char coordinate[10]={'1','2','3','4','5','6','7','8','9'};
-void board(){
-
-
-cout<<"\t'W E L C O M E    T O    T I C    T A C    T O E    G A M E'\n\n       \t\t\t\t  ^_^"<<endl;
-cout<<"\n";
-
-cout<<"Player1 [X]\nPlayer2 [0]\n";
-cout<<"\n";
-cout<<"\t\t               |       |               \n";
-cout<<"\t\t           "<< coordinate [0]<<"   |   "<<coordinate [1] <<"   |   " <<  coordinate [2]  <<"        \n";
-cout<<"\t\t        _______|_______|_______        \n";
-cout<<"\t\t               |       |               \n";
-cout<<"\t\t           "<< coordinate [3]<<"   |   "<<coordinate [4] <<"   |   " <<  coordinate [5]  <<"        \n";
-cout<<"\t\t        _______|_______|_______        \n";
-cout<<"\t\t               |       |               \n";
-cout<<"\t\t           "<< coordinate [6]<<"   |   "<<coordinate [7] <<"   |   " <<  coordinate [8]  <<"        \n";
-cout<<"\t\t               |       |               \n";
-cout<<"\n";
-cout<<"Player1 [X] turn:\n";
+int a;
+int result();
+void winner(){
+        a=result();
+        if(a==1)
+        cout<<"player 1 win";
+        else if(a==2)
+        cout<<"player 2 win";
+        else if(a==3)
+        cout<<"gameover";
 }
 
-int main(){
-board();
+void board(){
+    cout<<"\n";
+    cout<<"\t\t               |       |               \n";
+    cout<<"\t\t           "<< coordinate [0]<<"   |   "<<coordinate [1] <<"   |   " <<  coordinate [2]  <<"        \n";
+    cout<<"\t\t        _______|_______|_______        \n";
+    cout<<"\t\t               |       |               \n";
+    cout<<"\t\t           "<< coordinate [3]<<"   |   "<<coordinate [4] <<"   |   " <<  coordinate [5]  <<"        \n";
+    cout<<"\t\t        _______|_______|_______        \n";
+    cout<<"\t\t               |       |               \n";
+    cout<<"\t\t           "<< coordinate [6]<<"   |   "<<coordinate [7] <<"   |   " <<  coordinate [8]  <<"        \n";
+    cout<<"\t\t               |       |               \n";
+    cout<<"\n";
 }
 
 void assignSign(){
-    int n11, n12, n13, n14, n15, n21, n22, n23, n24;
-    cout<<"Player 1 -> X"<<endl;
-    cout<<"Player 2 -> O"<<endl;
-    cout<<"Enter a Cell number you want to put mark\n";
+        int n11, n12, n13, n14, n15, n21, n22, n23, n24;
+        cout<<"Player 1 -> X"<<endl;
+        cout<<"Player 2 -> O"<<endl;
+        cout<<"Enter a Cell number you want to put mark\n";
     
         cout<<"Player 1 :";
         cin>>n11;
@@ -110,17 +110,6 @@ void assignSign(){
         result();
 }
 
-int result();
-void winner(){
-        a=result();
-        if(a==1)
-        cout<<"player 1 win";
-        else if(a==2)
-        cout<<"player 2 win";
-        else if(a==3)
-        cout<<"gameover";
-}
-
 int result(){
     if((coordinate[0]==coordinate[3])&&coordinate[0]==coordinate[6]){
         if(coordinate[0]=='X')
@@ -176,5 +165,9 @@ int result(){
 }
 
 int main(){
-
+    cout<<"\t'W E L C O M E    T O    T I C    T A C    T O E    G A M E'\n\n       \t\t\t\t  ^_^"<<endl;
+    cout<<"\n";
+    board();
+    assignSign();
+    return 0;
 }
