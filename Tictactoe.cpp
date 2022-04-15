@@ -1,6 +1,33 @@
 #include<iostream>
 using namespace std;
 
+char coordinate[10]={'1','2','3','4','5','6','7','8','9'};
+void board(){
+
+
+cout<<"\t'W E L C O M E    T O    T I C    T A C    T O E    G A M E'\n\n       \t\t\t\t  ^_^"<<endl;
+cout<<"\n";
+
+cout<<"Player1 [X]\nPlayer2 [0]\n";
+cout<<"\n";
+cout<<"\t\t               |       |               \n";
+cout<<"\t\t           "<< coordinate [0]<<"   |   "<<coordinate [1] <<"   |   " <<  coordinate [2]  <<"        \n";
+cout<<"\t\t        _______|_______|_______        \n";
+cout<<"\t\t               |       |               \n";
+cout<<"\t\t           "<< coordinate [3]<<"   |   "<<coordinate [4] <<"   |   " <<  coordinate [5]  <<"        \n";
+cout<<"\t\t        _______|_______|_______        \n";
+cout<<"\t\t               |       |               \n";
+cout<<"\t\t           "<< coordinate [6]<<"   |   "<<coordinate [7] <<"   |   " <<  coordinate [8]  <<"        \n";
+cout<<"\t\t               |       |               \n";
+cout<<"\n";
+cout<<"Player1 [X] turn:\n";
+}
+
+int main(){
+board();
+}
+
+
 void assignSign(){
     int n11, n12, n13, n14, n15, n21, n22, n23, n24;
     cout<<"Player 1 -> X"<<endl;
