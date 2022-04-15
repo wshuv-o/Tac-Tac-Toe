@@ -27,7 +27,6 @@ int main(){
 board();
 }
 
-
 void assignSign(){
     int n11, n12, n13, n14, n15, n21, n22, n23, n24;
     cout<<"Player 1 -> X"<<endl;
@@ -110,6 +109,72 @@ void assignSign(){
         board();
         result();
 }
+
+int result();
+void winner(){
+        a=result();
+        if(a==1)
+        cout<<"player 1 win";
+        else if(a==2)
+        cout<<"player 2 win";
+        else if(a==3)
+        cout<<"gameover";
+}
+
+int result(){
+    if((coordinate[0]==coordinate[3])&&coordinate[0]==coordinate[6]){
+        if(coordinate[0]=='X')
+        return 1;
+        else
+        return 2;
+    }
+    else if((coordinate[1]==coordinate[4])&&coordinate[1]==coordinate[7]){
+        if(coordinate[1]=='X')
+        return 1;
+        else
+        return 2;
+    }
+    else if((coordinate[2]==coordinate[5])&&coordinate[2]==coordinate[8]){
+        if(coordinate[2]=='X')
+        return 1;
+        else
+        return 2;
+    }
+    else if((coordinate[0]==coordinate[1])&&coordinate[0]==coordinate[2]){
+        if(coordinate[0]=='X')
+        return 1;
+        else
+        return 2;
+    }
+    else if((coordinate[3]==coordinate[4])&&coordinate[3]==coordinate[5]){
+        if(coordinate[3]=='X')
+        return 1;
+        else
+        return 2;
+    }
+    else if((coordinate[6]==coordinate[7])&&coordinate[6]==coordinate[8]){
+        if(coordinate[6]=='X')
+        return 1;
+        else
+        return 2;
+    }
+    else if((coordinate[0]==coordinate[4])&&coordinate[0]==coordinate[8]){
+        if(coordinate[0]=='X')
+        return 1;
+        else
+        return 2;
+    }
+    else if((coordinate[6]==coordinate[4])&&coordinate[6]==coordinate[2]){
+        if(coordinate[6]=='X')
+        return 1;
+        else
+        return 2;
+    }
+    else if (coordinate[0] != '1' && coordinate[1] != '2' && coordinate[2] != '3' && coordinate[3] != '4' && coordinate[4] != '5' && coordinate[5] != '6' && coordinate[6] != '7' && coordinate[7] != '8' && coordinate[8] != '9'){
+        return 3;
+    }
+}
+
 int main(){
 
 }
