@@ -31,8 +31,8 @@ void board(){
 
 void assignSign(){
     int n11, n12, n13, n14, n15, n21, n22, n23, n24;
-    cout<<"Player 1 -> X"<<endl;
-    cout<<"Player 2 -> O"<<endl;
+    cout<<player1<<" -> X"<<endl;
+    cout<<player2<<" -> O"<<endl;
     cout<<"Enter a Cell number you want to put mark\n";
     
         cout<<player1<<" :";
@@ -216,6 +216,7 @@ int result(){
     else if (coordinate[0] != '1' && coordinate[1] != '2' && coordinate[2] != '3' && coordinate[3] != '4' && coordinate[4] != '5' && coordinate[5] != '6' && coordinate[6] != '7' && coordinate[7] != '8' && coordinate[8] != '9'){
         return 3;
     }
+        return -1;
 }
 
 int main(){
